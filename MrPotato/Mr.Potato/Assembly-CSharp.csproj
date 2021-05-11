@@ -58,11 +58,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Camera.cs" />
+     <Compile Include="Assets\Scripts\BackGround.cs" />
      <Compile Include="Assets\Scripts\HelloWorld.cs" />
+     <Compile Include="Assets\Scripts\MCamera.cs" />
      <Compile Include="Assets\Scripts\PlayerControl.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/yang/file/unity/unity/MrPotato/Mr.Potato/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Cinemachine">
+ <HintPath>/Users/yang/file/unity/unity/MrPotato/Mr.Potato/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Animation.Runtime">
  <HintPath>/Users/yang/file/unity/unity/MrPotato/Mr.Potato/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
@@ -127,6 +131,9 @@
  <Reference Include="Unity.2D.Animation.Editor">
  <HintPath>/Users/yang/file/unity/unity/MrPotato/Mr.Potato/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="com.unity.cinemachine.editor">
+ <HintPath>/Users/yang/file/unity/unity/MrPotato/Mr.Potato/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Mathematics.Editor">
  <HintPath>/Users/yang/file/unity/unity/MrPotato/Mr.Potato/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
  </Reference>
@@ -141,12 +148,6 @@
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>/Users/yang/file/unity/unity/MrPotato/Mr.Potato/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="Cinemachine">
- <HintPath>/Users/yang/file/unity/unity/MrPotato/Mr.Potato/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
- </Reference>
- <Reference Include="com.unity.cinemachine.editor">
- <HintPath>/Users/yang/file/unity/unity/MrPotato/Mr.Potato/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>/Applications/Unity/Hub/Editor/2019.4.23f1c1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
