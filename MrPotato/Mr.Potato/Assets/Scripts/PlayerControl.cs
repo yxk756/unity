@@ -7,6 +7,8 @@ public class PlayerControl : MonoBehaviour
     private Rigidbody2D heroBody;
 
     public float MaxSpeed = 3;
+
+    private Animator animator;
     
     //用户输入的力量 -1  ->   1
     private float finput = 0.0f;
@@ -18,7 +20,8 @@ public class PlayerControl : MonoBehaviour
     public float jumpForce = 550;
 
     //是否朝右
-    private bool bFaceRight = true;
+    [HideInInspector] //在Unnity中隐藏
+    public bool bFaceRight = true;
     
     private Transform groundCheck;
 
@@ -34,6 +37,8 @@ public class PlayerControl : MonoBehaviour
         heroBody = GetComponent<Rigidbody2D>();
         
         groundCheck = transform.Find("groundCheck");
+
+        animator = GetComponent<Animator>();
 
     }
 
@@ -62,6 +67,9 @@ public class PlayerControl : MonoBehaviour
         bJump = Input.GetButtonDown("Jump");
 
         Jump();
+        
+        //奔跑动作
+        animator.SetFloat("speed",Mathf.Abs(heroBody.velocity.x));
     }
 
     void FixedUpdate()
@@ -104,6 +112,8 @@ public class PlayerControl : MonoBehaviour
         {
             heroBody.AddForce(new Vector2(0f, jumpForce ) );
             bJump = false;
+            //播放跳跃动作
+            animator.SetTrigger("jump");
         }
         
     }

@@ -60,6 +60,7 @@ public class MCamera : MonoBehaviour
         if (NeedMoveY())
             CamNewY = Mathf.Lerp(CamNewY, 
                 player.position.y, smoothY * Time.deltaTime);
+        
         //将新摄像机位置固定在合法范围内
         CamNewX = Mathf.Clamp(CamNewX, minCamXandY.x, maxCamXandY.x);
         CamNewY = Mathf.Clamp(CamNewY, minCamXandY.y, maxCamXandY.y);
