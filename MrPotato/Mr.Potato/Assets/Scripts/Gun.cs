@@ -13,7 +13,7 @@ public class Gun : MonoBehaviour
     
     private bool fired = false;
     
-    //private Animator animator;
+    private Animator animator;
 
     private AudioSource ac;
     
@@ -22,7 +22,7 @@ public class Gun : MonoBehaviour
     void Start()
     {
         _playerControl = GameObject.Find("hero").GetComponent<PlayerControl>();
-        //animator = transform.GetComponent<Animator>();
+        animator = transform.root.GetComponent<Animator>();
 
         ac = GetComponent<AudioSource>();
     }
@@ -31,23 +31,22 @@ public class Gun : MonoBehaviour
     {
         if (fired)
         {
+            animator.SetTrigger("shoot");
             ac.Play();
             Vector3 speed = new Vector3(0, 0, 0);
             if (_playerControl.bFaceRight)
             {
-                Debug.Log("rrrrft");
+                //Debug.Log("rrrrft");
                 Rigidbody2D rRocket = Instantiate(rocket,transform.position, Quaternion.Euler(speed));
                 rRocket.velocity = new Vector2(fSpeed, 0);
             }
             else
             {
-                Debug.Log("left");
+                //Debug.Log("left");
                 speed.z = 180;
                 Rigidbody2D rRocket = Instantiate(rocket,transform.position, Quaternion.Euler(speed));
                 rRocket.velocity = new Vector2(-fSpeed, 0);
             }
-            //开火动作
-           // animator.SetTrigger("shoot");
             
         }
 
@@ -61,4 +60,5 @@ public class Gun : MonoBehaviour
         _playerControl = transform.root.GetComponent<PlayerControl>();
         SendFire();
     }
+    
 }

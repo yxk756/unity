@@ -17,7 +17,7 @@ public class PlayerControl : MonoBehaviour
     public float moveForce = 100;
 
     //jump的力量放大的倍数
-    public float jumpForce = 550;
+    public float jumpForce = 555;
 
     //是否朝右
     [HideInInspector] //在Unnity中隐藏
